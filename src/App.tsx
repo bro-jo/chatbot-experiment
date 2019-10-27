@@ -88,6 +88,9 @@ const App: React.FC = () => {
                         </p>
                     </div>
                 </div>
+                <div className="row my-5">
+                    &nbsp;
+                </div>
             </div>
             {/*<div className="App-overlay" />*/}
             {showModal && (

@@ -69,6 +69,10 @@ textarea:focus, input:focus{
   line-height: 32px;
 }
 
+.feature {
+  padding-top: 32px;
+}
+
 .feature .inShort {
   font-size: 18px;
   text-align: center;
