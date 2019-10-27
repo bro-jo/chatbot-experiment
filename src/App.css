@@ -251,6 +251,13 @@ textarea:focus, input:focus{
   background-repeat: no-repeat;
 }
 
+.chat-processing {
+  position: absolute;
+  bottom: 20px;
+  left: 20%;
+  color: #23549C;
+}
+
 .chat-input-box {
   position: fixed;
   left: 20%;
@@ -263,6 +270,18 @@ textarea:focus, input:focus{
   -webkit-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.18);
   -moz-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.18);
   box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.18);
+}
+
+.chat-input-box.disableInput {
+  background-color: rgba(199, 199, 199, 1);
+}
+
+.chat-input-box.disableInput > input {
+  background-color: rgba(199, 199, 199, 1);
+}
+
+.chat-input-box.disableInput > div {
+  background-color: rgba(199, 199, 199, 1);
 }
 
 .chat-input-box > input {

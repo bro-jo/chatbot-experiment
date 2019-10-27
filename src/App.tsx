@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import classNames from 'classnames';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
-import { Keyword } from './component/Keyword';
 import { ChatBalloon } from './component/ChatBalloon';
+import { conversations } from './data/converstaion';
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+// @ts-ignore
+import Loader from 'react-loader-spinner';
+import classNames from 'classnames';
 
 let keywords = [
     'Laptop',
@@ -24,9 +25,75 @@ let keywords = [
 ];
 
 const App: React.FC = () => {
+    const inputEl = useRef(null);
+    const chatContainerEl = useRef(null);
+    const chatContainerBottomEl = useRef(null);
+    const [conversation, setConversation] = useState([] as any);
+    const [disableInput, setDisableInput] = useState(false);
+    const [step, setStep] = useState(0);
     const [showModal, setShowModal] = useState(false);
-    const openModal = () => setShowModal(true);
-    const closeModal = () => setShowModal(false);
+    useEffect(() => {
+        if (!disableInput && inputEl && inputEl.current) {
+            (inputEl.current as any).focus();
+        }
+    }, [inputEl, disableInput]);
+    const openModal = useCallback(() => {
+        setTimeout(() => {
+            setDisableInput(true);
+            conversations[0].forEach((c, i) => {
+                setTimeout(() => {
+                    setConversation(conversations[0].slice(0, i + 1));
+                    scrollToBottom();
+                    if (i === conversations[0].length - 1) {
+                        setDisableInput(false);
+                    }
+                }, i * 1200);
+            });
+        }, 300);
+        setShowModal(true);
+    }, []);
+    const closeModal = useCallback(() => setShowModal(false), []);
+    const scrollToBottom = () => {
+        setTimeout(() => (chatContainerBottomEl.current as any).scrollIntoView({ behavior: "smooth" }), 500);
+    };
+    const sendMessage = useCallback(() => {
+        const value = inputEl && inputEl.current && (inputEl.current as any).value;
+        if (!value) {
+            return;
+        }
+
+        try {
+            setDisableInput(true);
+            (inputEl.current as any).value = '';
+
+            const conversationWithMine = conversation.concat({ author: 'Me', text: value });
+            setConversation(conversationWithMine);
+            scrollToBottom();
+            setTimeout(() => {
+                let currentConversation = conversationWithMine;
+                if (!conversations[step + 1]) {
+                    setDisableInput(false);
+                    scrollToBottom();
+                    return;
+                }
+
+                conversations[step + 1].forEach((c, i) => {
+                    setTimeout(() => {
+                        setConversation(currentConversation.concat(conversations[step + 1].slice(0, i + 1)));
+                        scrollToBottom();
+                        if (i === conversations[step + 1].length - 1) {
+                            setDisableInput(false);
+                        }
+                    }, i * 1200);
+                });
+                setStep(step + 1);
+                scrollToBottom();
+            }, 1200);
+        } catch (err) {
+            console.error(err);
+            setDisableInput(false);
+        }
+    }, [step, conversation, inputEl]);
 
     return (
         <div className="App">
@@ -36,20 +103,17 @@ const App: React.FC = () => {
                     <div className="row">
                         <div className="col-sm-5 camera-bg" />
                         <div className="col-sm-7">
-                            <p className="mx-5 mt-5 mb-3">
+                            <div className="mx-5 mt-5 mb-3">
                                 <h3 className="mainMessage">Finding Your Perfect Camera</h3>
-                            </p>
-                            <p className="mx-5 mt-2 mb-2">
+                            </div>
+                            <div className="mx-5 mt-2 mb-2">
                                 <h5 className="subMessage">
                                     Loren ipsum dolor sit amet, consectetur adipiscing elit.
                                     Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.
                                 </h5>
-                            </p>
+                            </div>
                             <p className="mx-5 mt-4 mb-2 text-left">
-                                <div
-                                    className="button main-button"
-                                    onClick={() => openModal()}
-                                >
+                                <div className="button main-button" onClick={() => openModal()}>
                                     SHOP NOW
                                 </div>
                             </p>
@@ -115,152 +179,44 @@ const App: React.FC = () => {
                         >
                             <Modal.Body>
                                 <div className="avatar-image" />
-                                <div className="chat-container">
-                                    <ChatBalloon
-                                        isSystem
-                                        chat={{
-                                            author: 'SYSTEM',
-                                            text: 'HI. Alex, an automated chat-bot, ' +
-                                                'will be with you shortly to assist you.',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Alex',
-                                            text:
-                                                'Hi! I’m Alex, an automated chat-bot. I’m happy to help you with your purchase.',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Alex',
-                                            text:
-                                                'Is this purchase for you or is this a gift?',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={true}
-                                        chat={{
-                                            author: 'Me',
-                                            text: 'This is for a gift',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Okay, so, you’d like to buy a camera for a gift. I’d be glad to help you find a camera.',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'What type of camera are you looking for? Are you looking for a DSLR, a compact digital camera, or a point-and-shoot camera?',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{ author: 'Andy', imageUri: '/image/notebooks1.png' }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={true}
-                                        chat={{
-                                            author: 'Me',
-                                            text: 'um.. left one',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Okay, so you are looking for a point-and-shoot camera as a gift. Okay, let me ask another question',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Which brand do you prefer? We have “xx”, “cc”, and “dd” brands',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={true}
-                                        chat={{
-                                            author: 'Me',
-                                            text: 'I prefer “xx”.',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Okay, Great choice!',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'What is your price range? Over $1700? Or Below $1700?',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={true}
-                                        chat={{
-                                            author: 'Me',
-                                            text: 'Less than $1700',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Okay, you’d like to buy a Canon point-and-shoot digital camera ',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Please give me a moment, and I’ll look for the best digital camera for you',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Based on your preferences, I’ve located the best digital camera. Please see the following details about the digital camera.',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'We at Digital World hope you’ll like this recommendation and that our advice will help you make an informed decision about which camera best fits your needs.',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={false}
-                                        chat={{
-                                            author: 'Andy',
-                                            text: 'Thank you!',
-                                        }}
-                                    />
-                                    <ChatBalloon
-                                        isFromMe={true}
-                                        chat={{
-                                            author: 'Me',
-                                            text: 'Thank you :)',
-                                        }}
+                                {disableInput && <div className="chat-processing">
+                                    <Loader type="ThreeDots" color="#23549C" height={40} width={40} />
+                                    processing...
+                                </div>}
+                                <div
+                                    ref={chatContainerEl}
+                                    className="chat-container"
+                                >
+                                    {conversation
+                                        .filter((e: any) => e && e.author)
+                                        .map((e: any, i: number) => (
+                                        <ChatBalloon
+                                            key={`chat-${i}`}
+                                            isSystem={e.author.toUpperCase() === 'SYSTEM'}
+                                            isFromMe={e.author.toUpperCase() === 'ME'}
+                                            chat={e}
+                                        />
+                                    ))}
+                                    <div
+                                        ref={chatContainerBottomEl}
                                     />
                                 </div>
                             </Modal.Body>
-                            <div className="chat-input-box">
-                                <input />
-                                <div className="search-btn">
+                            <div className={classNames("chat-input-box", {'disableInput': disableInput})}>
+                                <input
+                                    ref={inputEl}
+                                    disabled={disableInput}
+                                    onKeyDown={(e) => {
+                                        if (e.key === 'Enter') {
+                                            sendMessage();
+                                        }
+                                    }}
+                                    onSubmit={() => sendMessage()}
+                                />
+                                <div
+                                    className="search-btn"
+                                    onClick={() => sendMessage()}
+                                >
                                     <div className="search-icon" />
                                 </div>
                             </div>
