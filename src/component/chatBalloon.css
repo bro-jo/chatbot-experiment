@@ -47,18 +47,17 @@
     border-top-right-radius: 8px;
 }
 
-.chat-balloon--systemMessage {
-    display: inline-block;
-    max-width: 50%;
-    min-width: 30px;
-    opacity: 0.8;
-    padding: 4px 16px;
-    margin: 24px 8px;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 12px;
-    background: #a0a0a0;
+.chat-system {
+    color: rgb(77, 77, 77);
+    border-color: rgb(77, 77, 77);
+}
+
+.chat-balloon--box.chat-system {
+    font-size: 14px;
+    border-radius: 16px;
+    background-color: rgb(77, 77, 77);
+    color: rgb(245, 245, 245);
+    margin-bottom: 20px;
 }
 
 .bg-gray {
