@@ -6,11 +6,13 @@ export const conversations = [
         },
         {
             author: 'Alex',
-            text: 'Hi! I’m Alex, an automated chat-bot. I’m happy to help you with your purchase. We have all different types of cameras, from inexpensive digital compacts to high-end DSLRs.',
+            text:
+                'Hi! I’m Alex, an automated chat-bot. I’m happy to help you with your purchase. We have all different types of cameras, from inexpensive digital compacts to high-end DSLRs.',
         },
         {
             author: 'Alex',
-            text: 'In order to ensure that I make the most suitable recommendations for you, I’d like to ask you some questions.',
+            text:
+                'In order to ensure that I make the most suitable recommendations for you, I’d like to ask you some questions.',
         },
         {
             author: 'Alex',

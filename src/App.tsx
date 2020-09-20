@@ -4,7 +4,7 @@ import './App.css';
 import Modal from 'react-bootstrap/Modal';
 import { ChatBalloon } from './component/ChatBalloon';
 import { conversations } from './data/converstaion';
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 // @ts-ignore
 import Loader from 'react-loader-spinner';
 import classNames from 'classnames';
@@ -54,7 +54,10 @@ const App: React.FC = () => {
     }, []);
     const closeModal = useCallback(() => setShowModal(false), []);
     const scrollToBottom = () => {
-        setTimeout(() => (chatContainerBottomEl.current as any).scrollIntoView({ behavior: "smooth" }), 500);
+        setTimeout(
+            () => (chatContainerBottomEl.current as any).scrollIntoView({ behavior: 'smooth' }),
+            500,
+        );
     };
     const sendMessage = useCallback(() => {
         const value = inputEl && inputEl.current && (inputEl.current as any).value;
@@ -79,7 +82,9 @@ const App: React.FC = () => {
 
                 conversations[step + 1].forEach((c, i) => {
                     setTimeout(() => {
-                        setConversation(currentConversation.concat(conversations[step + 1].slice(0, i + 1)));
+                        setConversation(
+                            currentConversation.concat(conversations[step + 1].slice(0, i + 1)),
+                        );
                         scrollToBottom();
                         if (i === conversations[step + 1].length - 1) {
                             setDisableInput(false);
@@ -104,17 +109,18 @@ const App: React.FC = () => {
                         <div className="col-sm-5 camera-bg" />
                         <div className="col-sm-7">
                             <div className="mx-5 mt-5 mb-3">
-                                <h3 className="mainMessage">Finding Your Perfect Camera</h3>
+                                <h3 className="mainMessage">Find Your Perfect Camera</h3>
                             </div>
                             <div className="mx-5 mt-2 mb-2">
                                 <h5 className="subMessage">
-                                    Loren ipsum dolor sit amet, consectetur adipiscing elit.
-                                    Phasellus at iaculis quam. Integer accumsan tincidunt fringilla.
+                                    Start counseling with our AI agent Alex for great
+                                    recommendations on digital cameras, from point and shoot to
+                                    DSLR.
                                 </h5>
                             </div>
                             <p className="mx-5 mt-4 mb-2 text-left">
                                 <div className="button main-button" onClick={() => openModal()}>
-                                    SHOP NOW
+                                    START CONVERSATION
                                 </div>
                             </p>
                         </div>
@@ -127,8 +133,7 @@ const App: React.FC = () => {
                         </div>
                         <p className="inShort m-2">FREE SHIPPING</p>
                         <p className="description m-1">
-                            Loren ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at
-                            iaculis quam. Integer accumsan tincidunt fringilla.
+                            Change the sentence to: Free next-day delivery on thousands of items.
                         </p>
                     </div>
                     <div className="col-sm-4 text-center feature">
@@ -137,8 +142,7 @@ const App: React.FC = () => {
                         </div>
                         <p className="inShort m-2">FREE RETURNS</p>
                         <p className="description m-1">
-                            Loren ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at
-                            iaculis quam. Integer accumsan tincidunt fringilla.
+                            You may return any item purchased on Digital World.
                         </p>
                     </div>
                     <div className="col-sm-4 text-center feature">
@@ -147,8 +151,7 @@ const App: React.FC = () => {
                         </div>
                         <p className="inShort m-2">CUSTOMER SUPPORT</p>
                         <p className="description m-1">
-                            Loren ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at
-                            iaculis quam. Integer accumsan tincidunt fringilla.
+                            Manage your account, check order status or access the Digital World customer support.
                         </p>
                     </div>
                 </div>
@@ -179,44 +182,47 @@ const App: React.FC = () => {
                         >
                             <Modal.Body>
                                 <div className="avatar-image" />
-                                {disableInput && <div className="chat-processing">
-                                    <Loader type="ThreeDots" color="#23549C" height={40} width={40} />
-                                    processing...
-                                </div>}
-                                <div
-                                    ref={chatContainerEl}
-                                    className="chat-container"
-                                >
+                                {disableInput && (
+                                    <div className="chat-processing">
+                                        <Loader
+                                            type="ThreeDots"
+                                            color="#23549C"
+                                            height={40}
+                                            width={40}
+                                        />
+                                        processing...
+                                    </div>
+                                )}
+                                <div ref={chatContainerEl} className="chat-container">
                                     {conversation
                                         .filter((e: any) => e && e.author)
                                         .map((e: any, i: number) => (
-                                        <ChatBalloon
-                                            key={`chat-${i}`}
-                                            isSystem={e.author.toUpperCase() === 'SYSTEM'}
-                                            isFromMe={e.author.toUpperCase() === 'ME'}
-                                            chat={e}
-                                        />
-                                    ))}
-                                    <div
-                                        ref={chatContainerBottomEl}
-                                    />
+                                            <ChatBalloon
+                                                key={`chat-${i}`}
+                                                isSystem={e.author.toUpperCase() === 'SYSTEM'}
+                                                isFromMe={e.author.toUpperCase() === 'ME'}
+                                                chat={e}
+                                            />
+                                        ))}
+                                    <div ref={chatContainerBottomEl} />
                                 </div>
                             </Modal.Body>
-                            <div className={classNames("chat-input-box", {'disableInput': disableInput})}>
+                            <div
+                                className={classNames('chat-input-box', {
+                                    disableInput: disableInput,
+                                })}
+                            >
                                 <input
                                     ref={inputEl}
                                     disabled={disableInput}
-                                    onKeyDown={(e) => {
+                                    onKeyDown={e => {
                                         if (e.key === 'Enter') {
                                             sendMessage();
                                         }
                                     }}
                                     onSubmit={() => sendMessage()}
                                 />
-                                <div
-                                    className="search-btn"
-                                    onClick={() => sendMessage()}
-                                >
+                                <div className="search-btn" onClick={() => sendMessage()}>
                                     <div className="search-icon" />
                                 </div>
                             </div>
