@@ -141,6 +141,7 @@ textarea:focus, input:focus{
   -webkit-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.058);
   -moz-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.058);
   box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.058);
+  transition: all 0.2s
 }
 
 .main-button:hover,
@@ -148,9 +149,10 @@ textarea:focus, input:focus{
   cursor: pointer;
   color: rgba(255, 255, 255, 1);
   background-color: #5f6ae3;
-  -webkit-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.099);
-  -moz-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.099);
-  box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.099);
+  -webkit-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.199);
+  -moz-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.199);
+  box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.199);
+  transform: scale(1.02);
 }
 
 .App-overlay {
@@ -231,31 +233,37 @@ textarea:focus, input:focus{
 
 .chat-container {
   display: inline-block;
-  width: 68%;
+  width: 75%;
   padding: 8px 20px;
-  background-color: #fafafa;
-  border-radius: 8px;
+  background-color: #ffffff00;
+  border-radius: 12px;
 }
 
 .avatar-image {
   display: inline-block;
   vertical-align: top;
-  width: 30%;
+  width: 22%;
   height: 60vh;
-  margin-right: 2%;
+  margin-left: 1%;
+  margin-right: 0.2%;
   background-color: #fafaff;
   border-radius: 8px;
   background: url("/image/avatar1.jpeg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
+  align-content: end;
+  align-self: end;
 }
 
 .chat-processing {
   position: absolute;
   bottom: 20px;
   left: 20%;
-  color: #23549C;
+  color: #5f6ae3;
+  text-align: right;
+  font-weight: bold;
+  transform: translateX(-60%) translateY(-80%) scale(1.05);
 }
 
 .chat-input-box {

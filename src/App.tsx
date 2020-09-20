@@ -24,6 +24,8 @@ let keywords = [
     'Ex8',
 ];
 
+const INTERVAL_TIME = 3100;
+
 const App: React.FC = () => {
     const inputEl = useRef(null);
     const chatContainerEl = useRef(null);
@@ -47,7 +49,7 @@ const App: React.FC = () => {
                     if (i === conversations[0].length - 1) {
                         setDisableInput(false);
                     }
-                }, i * 1200);
+                }, i * INTERVAL_TIME);
             });
         }, 300);
         setShowModal(true);
@@ -89,11 +91,11 @@ const App: React.FC = () => {
                         if (i === conversations[step + 1].length - 1) {
                             setDisableInput(false);
                         }
-                    }, i * 1200);
+                    }, i * INTERVAL_TIME);
                 });
                 setStep(step + 1);
                 scrollToBottom();
-            }, 1200);
+            }, INTERVAL_TIME);
         } catch (err) {
             console.error(err);
             setDisableInput(false);
