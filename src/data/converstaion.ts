@@ -1,4 +1,9 @@
-export const conversations: {author: string; text?: string; link?: string; imageUri?: string;}[][] = [
+export const conversations: {
+    author: string;
+    text?: string;
+    link?: string;
+    imageUri?: string;
+}[][] = [
     [
         {
             author: 'SYSTEM',
@@ -8,7 +13,7 @@ export const conversations: {author: string; text?: string; link?: string; image
             author: 'Alex',
             text:
                 'Hi! I’m Alex, an automated chat-bot. I’m happy to help you with your purchase. We have all different types of cameras, from inexpensive digital compacts to high-end DSLRs.\n' +
-              'In order to ensure that I make the most suitable recommendations for you, I’d like to ask you some questions.',
+                'In order to ensure that I make the most suitable recommendations for you, I’d like to ask you some questions.',
         },
         {
             author: 'Alex',
@@ -69,12 +74,11 @@ export const conversations: {author: string; text?: string; link?: string; image
         {
             author: 'Alex',
             text:
-              'We at Digital World hope you’ll like this recommendation and that our advice will help you make an informed decision about which camera best fits your needs.',
+                'We at Digital World hope you’ll like this recommendation and that our advice will help you make an informed decision about which camera best fits your needs.',
         },
         {
             author: 'Alex',
-            text:
-              '*camera-choice-space*',
+            text: '*camera-choice-space*',
         },
         {
             author: 'Alex',

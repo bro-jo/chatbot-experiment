@@ -8,7 +8,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 // @ts-ignore
 import Loader from 'react-loader-spinner';
 import classNames from 'classnames';
-import _ from 'lodash'
+import _ from 'lodash';
 
 let keywords = [
     'Laptop',
@@ -72,11 +72,19 @@ const App: React.FC = () => {
             setDisableInput(true);
             (inputEl.current as any).value = '';
 
-            if (value.toLowerCase() === 'sony' || value.toLowerCase() === 'nikon' || value.toLowerCase() === 'canon') {
+            if (
+                value.toLowerCase() === 'sony' ||
+                value.toLowerCase() === 'nikon' ||
+                value.toLowerCase() === 'canon'
+            ) {
                 localStorage.setItem('camera/brand', value);
             }
-            const number = parseInt(value.replace(/\D/g,''), 10);
-            if (value.includes('below') || value.includes('under') || (number < 1700 && number > 100)) {
+            const number = parseInt(value.replace(/\D/g, ''), 10);
+            if (
+                value.includes('below') ||
+                value.includes('under') ||
+                (number < 1700 && number > 100)
+            ) {
                 localStorage.setItem('camera/price', 'below');
             }
             if (value.includes('over') || (number > 1700 && number < 99999999)) {
@@ -96,53 +104,61 @@ const App: React.FC = () => {
 
                 conversations[step + 1].forEach((m, i) => {
                     setTimeout(() => {
-                        const c = conversations[step + 1]
-                          .slice(0, i + 1)
-                          .map(e => {
-                              if ((e.text || '') === '*camera-choice-space*') {
-                                  const brand = localStorage.getItem('camera/brand');
-                                  const price = localStorage.getItem('camera/price');
-                                  if (brand === 'sony') {
-                                      if (price === 'below') {
-                                          e.text = 'Sony';
-                                          e.link = 'https://www.amazon.com/Sony-Cyber-shot-DSC-W800-Digital-Camera/dp/B00KJX57I8/ref=sr_1_3?dchild=1&keywords=Sony+DSCW800%2FB+20.1+MP+Digital+Camera+%28Black&qid=1599960270&sr=8-3';
-                                          e.imageUri = '/image/sony-below-1700.png';
-                                      } else {
-                                          e.text = 'Sony';
-                                          e.link = 'https://www.amazon.com/Sony-Full-Frame-Mirrorless-Interchangeable-Lens-Optical/dp/B07YQJ9392/ref=sr_1_1?dchild=1&keywords=Sony+a7+III+Full-Frame+Mirrorless+Interchangeable-Lens+Camera+Optical+with+3-Inch+LCD%2C+Black+%28ILCE7M3%2FB%29&qid=1599960502&sr=8-1';
-                                          e.imageUri = '/image/sony-over-1700.png';
-                                      }
-                                  } else if (brand === 'nikon') {
-                                      if (price === 'below') {
-                                          e.text = 'Nikon';
-                                          e.link = 'https://www.amazon.com/Nikon-COOLPIX-Digital-Camera-Black/dp/B01C3LEBW6/ref=sr_1_7?dchild=1&keywords=Nikon+camera+below+%241700&qid=1599961011&sr=8-7';
-                                          e.imageUri = '/image/nikon-below-1700.png';
-                                      } else {
-                                          e.text = 'Nikon';
-                                          e.link = 'https://www.amazon.com/Nikon-FX-Format-Mirrorless-Camera-Body/dp/B07GPRBGQ2/ref=sr_1_3?dchild=1&keywords=2.+Product%3A+Nikon+Z6+Full+Frame+Mirrorless+Camera+Body&qid=1599960926&sr=8-3';
-                                          e.imageUri = '/image/nikon-over-1700.png';
-                                      }
-                                  } else if (brand === 'canon') {
-                                      if (price === 'below') {
-                                          e.text = 'Canon';
-                                          e.link = 'https://www.amazon.com/Canon-PowerShot-Digital-Camera-Accessory/dp/B071NPXMLJ/ref=sr_1_5?dchild=1&keywords=Canon+-+PowerShot+SX540HS+20.3-Megapixel+Digital+Camera+-+Black&qid=1599960773&sr=8-5';
-                                          e.imageUri = '/image/canon-below-1700.png';
-                                      } else {
-                                          e.text = 'Canon';
-                                          e.link = 'https://www.amazon.com/Canon-Digital-Camera-18-135mm-Adapter/dp/B01KURGSGW/ref=sr_1_10?dchild=1&keywords=Canon+DSLR+over+%241700&qid=1599960675&sr=8-10';
-                                          e.imageUri = '/image/canon-over-1700.png';
-                                      }
-                                  }
+                        const c = conversations[step + 1].slice(0, i + 1).map(e => {
+                            if ((e.text || '') === '*camera-choice-space*') {
+                                const brand = localStorage.getItem('camera/brand');
+                                const price = localStorage.getItem('camera/price');
+                                if (brand === 'sony') {
+                                    if (price === 'below') {
+                                        e.text = 'Sony';
+                                        e.link =
+                                            'https://www.amazon.com/Sony-Cyber-shot-DSC-W800-Digital-Camera/dp/B00KJX57I8/ref=sr_1_3?dchild=1&keywords=Sony+DSCW800%2FB+20.1+MP+Digital+Camera+%28Black&qid=1599960270&sr=8-3';
+                                        e.imageUri = '/image/sony-below-1700.png';
+                                    } else {
+                                        e.text = 'Sony';
+                                        e.link =
+                                            'https://www.amazon.com/Sony-Full-Frame-Mirrorless-Interchangeable-Lens-Optical/dp/B07YQJ9392/ref=sr_1_1?dchild=1&keywords=Sony+a7+III+Full-Frame+Mirrorless+Interchangeable-Lens+Camera+Optical+with+3-Inch+LCD%2C+Black+%28ILCE7M3%2FB%29&qid=1599960502&sr=8-1';
+                                        e.imageUri = '/image/sony-over-1700.png';
+                                    }
+                                } else if (brand === 'nikon') {
+                                    if (price === 'below') {
+                                        e.text = 'Nikon';
+                                        e.link =
+                                            'https://www.amazon.com/Nikon-COOLPIX-Digital-Camera-Black/dp/B01C3LEBW6/ref=sr_1_7?dchild=1&keywords=Nikon+camera+below+%241700&qid=1599961011&sr=8-7';
+                                        e.imageUri = '/image/nikon-below-1700.png';
+                                    } else {
+                                        e.text = 'Nikon';
+                                        e.link =
+                                            'https://www.amazon.com/Nikon-FX-Format-Mirrorless-Camera-Body/dp/B07GPRBGQ2/ref=sr_1_3?dchild=1&keywords=2.+Product%3A+Nikon+Z6+Full+Frame+Mirrorless+Camera+Body&qid=1599960926&sr=8-3';
+                                        e.imageUri = '/image/nikon-over-1700.png';
+                                    }
+                                } else if (brand === 'canon') {
+                                    if (price === 'below') {
+                                        e.text = 'Canon';
+                                        e.link =
+                                            'https://www.amazon.com/Canon-PowerShot-Digital-Camera-Accessory/dp/B071NPXMLJ/ref=sr_1_5?dchild=1&keywords=Canon+-+PowerShot+SX540HS+20.3-Megapixel+Digital+Camera+-+Black&qid=1599960773&sr=8-5';
+                                        e.imageUri = '/image/canon-below-1700.png';
+                                    } else {
+                                        e.text = 'Canon';
+                                        e.link =
+                                            'https://www.amazon.com/Canon-Digital-Camera-18-135mm-Adapter/dp/B01KURGSGW/ref=sr_1_10?dchild=1&keywords=Canon+DSLR+over+%241700&qid=1599960675&sr=8-10';
+                                        e.imageUri = '/image/canon-over-1700.png';
+                                    }
+                                }
 
-                                  return e;
-                              }
-                              e.text = (e.text || '').replace('*camera/price*', `${localStorage.getItem('camera/price')} $1700`);
-                              e.text = e.text.replace('*camera/brand*', _.upperFirst(localStorage.getItem('camera/brand') || ''));
-                              return e;
-                          });
-                        setConversation(
-                            currentConversation.concat(c),
-                        );
+                                return e;
+                            }
+                            e.text = (e.text || '').replace(
+                                '*camera/price*',
+                                `${localStorage.getItem('camera/price')} $1700`,
+                            );
+                            e.text = e.text.replace(
+                                '*camera/brand*',
+                                _.upperFirst(localStorage.getItem('camera/brand') || ''),
+                            );
+                            return e;
+                        });
+                        setConversation(currentConversation.concat(c));
                         scrollToBottom();
                         if (i === conversations[step + 1].length - 1) {
                             setDisableInput(false);
@@ -209,7 +225,8 @@ const App: React.FC = () => {
                         </div>
                         <p className="inShort m-2">CUSTOMER SUPPORT</p>
                         <p className="description m-1">
-                            Manage your account, check order status or access the Digital World customer support.
+                            Manage your account, check order status or access the Digital World
+                            customer support.
                         </p>
                     </div>
                 </div>
