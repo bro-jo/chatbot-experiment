@@ -76,10 +76,10 @@ const App: React.FC = () => {
                 localStorage.setItem('camera/brand', value);
             }
             const number = parseInt(value.replace(/\D/g,''), 10);
-            if (number < 1700 && number > 100) {
+            if (value.includes('below') || value.includes('under') || (number < 1700 && number > 100)) {
                 localStorage.setItem('camera/price', 'below');
             }
-            if (number > 1700 && number < 99999999) {
+            if (value.includes('over') || (number > 1700 && number < 99999999)) {
                 localStorage.setItem('camera/price', 'over');
             }
 
