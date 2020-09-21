@@ -42,8 +42,11 @@
     <property name="js.last.introduce.type" value="CONST" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -107,7 +110,7 @@
       <workItem from="1570453592911" duration="7466000" />
       <workItem from="1572149410483" duration="8734000" />
       <workItem from="1572166796721" duration="367000" />
-      <workItem from="1600644242097" duration="1606000" />
+      <workItem from="1600644242097" duration="2039000" />
     </task>
     <servers />
   </component>
@@ -119,22 +122,22 @@
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state x="-1222" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600644577177" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1600644935904">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1600646298197">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600644935904" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1600644935901">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600646298197" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1600646298191">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600644935901" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1600644935900">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600646298191" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1600646298190">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600644935900" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1600644935903">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600646298190" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1600646298193">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600644935903" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600646298193" />
     <state x="-1253" y="196" width="586" height="490" key="find.popup" timestamp="1600645759956">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
