@@ -1,4 +1,4 @@
-export const conversations = [
+export const conversations: {author: string; text?: string; link?: string; imageUri?: string;}[][] = [
     [
         {
             author: 'SYSTEM',
@@ -55,7 +55,7 @@ export const conversations = [
     [
         {
             author: 'Alex',
-            text: 'Okay, you’d like to buy a *camera/brand* camera',
+            text: 'Okay, you’d like to buy a *camera/brand* camera *camera/price*',
         },
         {
             author: 'Alex',
@@ -69,7 +69,12 @@ export const conversations = [
         {
             author: 'Alex',
             text:
-                'We at Digital World hope you’ll like this recommendation and that our advice will help you make an informed decision about which camera best fits your needs.',
+              'We at Digital World hope you’ll like this recommendation and that our advice will help you make an informed decision about which camera best fits your needs.',
+        },
+        {
+            author: 'Alex',
+            text:
+              '*camera-choice-space*',
         },
         {
             author: 'Alex',

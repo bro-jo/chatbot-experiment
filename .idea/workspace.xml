@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f85b243e-9ac4-4abd-8743-23064a55f5d3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/image/canon-below-1700.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/canon-over-1700.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/nikon-below-1700.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/nikon-over-1700.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/sony-below-1700.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/sony-over-1700.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/ChatBalloon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ChatBalloon.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/data/converstaion.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/converstaion.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +47,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="CONST" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/image" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,14 +63,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/public" />
-      <recent name="$PROJECT_DIR$/public/image" />
-      <recent name="$PROJECT_DIR$/src/component" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/image" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/image" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/src/component" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -111,7 +117,7 @@
       <workItem from="1570453592911" duration="7466000" />
       <workItem from="1572149410483" duration="8734000" />
       <workItem from="1572166796721" duration="367000" />
-      <workItem from="1600644242097" duration="4829000" />
+      <workItem from="1600644242097" duration="8944000" />
     </task>
     <servers />
   </component>
@@ -123,33 +129,33 @@
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state x="-1222" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600644577177" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1600647200044">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1600655876309">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600647200044" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1600647200041">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600655876309" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1600655876306">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.center/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600647200041" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1600647200039">
+    <state width="1899" height="280" key="GridCell.Tab.0.center/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600655876306" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1600655876305">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.left/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600647200039" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1600647200043">
+    <state width="1899" height="280" key="GridCell.Tab.0.left/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600655876305" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1600655876308">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state width="1899" height="280" key="GridCell.Tab.0.right/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600647200043" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600655876308" />
     <state x="-1361" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600647073068">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state x="-1361" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600647073068" />
-    <state x="-1253" y="196" width="586" height="490" key="find.popup" timestamp="1600646681171">
+    <state x="-1253" y="196" width="586" height="490" key="find.popup" timestamp="1600670828934">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state x="-1253" y="196" width="586" height="490" key="find.popup/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600646681171" />
-    <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup" timestamp="1600647998910">
+    <state x="-1253" y="196" width="586" height="490" key="find.popup/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600670828934" />
+    <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup" timestamp="1600670849912">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
-    <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600647998910" />
+    <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600670849912" />
   </component>
 </project>

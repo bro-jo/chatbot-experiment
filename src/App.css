@@ -278,10 +278,18 @@ textarea:focus, input:focus{
   -webkit-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.18);
   -moz-box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.18);
   box-shadow: 4px 4px 20px 4px rgba(0,0,0,0.18);
+  opacity: 1;
+  transform: translateY(-20px) scale(1.05);
+  transition: all 0.2s
 }
 
 .chat-input-box.disableInput {
   background-color: rgba(199, 199, 199, 1);
+  transform: translateY(20px) scale(0.95);
+  opacity: 0.8;
+  -webkit-box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.018);
+  -moz-box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.018);
+  box-shadow: 4px 4px 10px 4px rgba(0,0,0,0.018);
 }
 
 .chat-input-box.disableInput > input {
@@ -340,4 +348,10 @@ textarea:focus, input:focus{
 .modal-dialog .modal-body .chat-container {
   height: 70vh;
   overflow-y: scroll;
+}
+
+.chat-balloon img.image {
+  max-width: 220px;
+  min-height: 30px;
+  padding-left: 24px;
 }
