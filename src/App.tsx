@@ -8,6 +8,7 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 // @ts-ignore
 import Loader from 'react-loader-spinner';
 import classNames from 'classnames';
+import _ from 'lodash'
 
 let keywords = [
     'Laptop',
@@ -62,7 +63,7 @@ const App: React.FC = () => {
         );
     };
     const sendMessage = useCallback(() => {
-        const value = inputEl && inputEl.current && (inputEl.current as any).value;
+        const value: string = (inputEl && inputEl.current && (inputEl.current as any).value) as any;
         if (!value) {
             return;
         }
@@ -70,6 +71,17 @@ const App: React.FC = () => {
         try {
             setDisableInput(true);
             (inputEl.current as any).value = '';
+
+            if (value.toLowerCase() === 'sony' || value.toLowerCase() === 'nikon' || value.toLowerCase() === 'canon') {
+                localStorage.setItem('camera/brand', value);
+            }
+            const number = parseInt(value.replace(/\D/g,''), 10);
+            if (number < 1700 && number > 100) {
+                localStorage.setItem('camera/price', 'below');
+            }
+            if (number > 1700 && number < 99999999) {
+                localStorage.setItem('camera/price', 'over');
+            }
 
             const conversationWithMine = conversation.concat({ author: 'Me', text: value });
             setConversation(conversationWithMine);
@@ -82,10 +94,16 @@ const App: React.FC = () => {
                     return;
                 }
 
-                conversations[step + 1].forEach((c, i) => {
+                conversations[step + 1].forEach((m, i) => {
                     setTimeout(() => {
+                        const c = conversations[step + 1]
+                          .slice(0, i + 1)
+                          .map(e => {
+                              e.text = e.text.replace('*camera/brand*', _.upperFirst(localStorage.getItem('camera/brand') || ''));
+                              return e;
+                          });
                         setConversation(
-                            currentConversation.concat(conversations[step + 1].slice(0, i + 1)),
+                            currentConversation.concat(c),
                         );
                         scrollToBottom();
                         if (i === conversations[step + 1].length - 1) {

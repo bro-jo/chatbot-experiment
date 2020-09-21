@@ -26,10 +26,10 @@ export const conversations = [
             text:
                 'What type of camera are you looking for? Are you looking for a point-and-shoot camera or DSLR?',
         },
-        {
-            author: 'Alex',
-            imageUri: '/image/notebooks1.png',
-        },
+        // {
+        //     author: 'Alex',
+        //     imageUri: '/image/notebooks1.png',
+        // },
     ],
     [
         {
@@ -55,7 +55,7 @@ export const conversations = [
     [
         {
             author: 'Alex',
-            text: 'Okay, you’d like to buy a Canon point-and-shoot digital camera ',
+            text: 'Okay, you’d like to buy a *camera/brand* camera',
         },
         {
             author: 'Alex',
