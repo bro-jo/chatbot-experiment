@@ -79,15 +79,33 @@ const App: React.FC = () => {
             ) {
                 localStorage.setItem('camera/brand', value);
             }
+            if (value.toLowerCase() === 'cannon') {
+                localStorage.setItem('camera/brand', 'canon');
+            }
             const number = parseInt(value.replace(/\D/g, ''), 10);
+            if (value.toLowerCase().includes('me')) {
+                localStorage.setItem('meorgift', 'for you');
+            }
+            if (value.toLowerCase().includes('gift')) {
+                localStorage.setItem('meorgift', 'as a gift');
+            }
+            if (value.toLowerCase().includes('dslr')) {
+                localStorage.setItem('camera/type', 'DSLR');
+            }
             if (
-                value.includes('below') ||
-                value.includes('under') ||
+                value.toLowerCase().includes('point and shoot') ||
+                value.toLowerCase().includes('point-and-shoot')
+            ) {
+                localStorage.setItem('camera/type', 'point-and-shoot');
+            }
+            if (
+                value.toLowerCase().includes('below') ||
+                value.toLowerCase().includes('under') ||
                 (number < 1700 && number > 100)
             ) {
                 localStorage.setItem('camera/price', 'below');
             }
-            if (value.includes('over') || (number > 1700 && number < 99999999)) {
+            if (value.toLowerCase().includes('over') || (number > 1700 && number < 99999999)) {
                 localStorage.setItem('camera/price', 'over');
             }
 
@@ -105,41 +123,42 @@ const App: React.FC = () => {
                 conversations[step + 1].forEach((m, i) => {
                     setTimeout(() => {
                         const c = conversations[step + 1].slice(0, i + 1).map(e => {
-                            if ((e.text || '') === '*camera-choice-space*') {
+                            if ((e.text || '').trim() === '*camera-choice-space*') {
                                 const brand = localStorage.getItem('camera/brand');
                                 const price = localStorage.getItem('camera/price');
+                                console.log({ brand, price });
                                 if (brand === 'sony') {
                                     if (price === 'below') {
-                                        e.text = 'Sony';
+                                        e.text = '[Sony] please click this';
                                         e.link =
                                             'https://www.amazon.com/Sony-Cyber-shot-DSC-W800-Digital-Camera/dp/B00KJX57I8/ref=sr_1_3?dchild=1&keywords=Sony+DSCW800%2FB+20.1+MP+Digital+Camera+%28Black&qid=1599960270&sr=8-3';
                                         e.imageUri = '/image/sony-below-1700.png';
                                     } else {
-                                        e.text = 'Sony';
+                                        e.text = '[Sony] please click this';
                                         e.link =
                                             'https://www.amazon.com/Sony-Full-Frame-Mirrorless-Interchangeable-Lens-Optical/dp/B07YQJ9392/ref=sr_1_1?dchild=1&keywords=Sony+a7+III+Full-Frame+Mirrorless+Interchangeable-Lens+Camera+Optical+with+3-Inch+LCD%2C+Black+%28ILCE7M3%2FB%29&qid=1599960502&sr=8-1';
                                         e.imageUri = '/image/sony-over-1700.png';
                                     }
                                 } else if (brand === 'nikon') {
-                                    if (price === 'below') {
-                                        e.text = 'Nikon';
+                                    if (price === '[below') {
+                                        e.text = 'Nikon] please click this';
                                         e.link =
                                             'https://www.amazon.com/Nikon-COOLPIX-Digital-Camera-Black/dp/B01C3LEBW6/ref=sr_1_7?dchild=1&keywords=Nikon+camera+below+%241700&qid=1599961011&sr=8-7';
                                         e.imageUri = '/image/nikon-below-1700.png';
                                     } else {
-                                        e.text = 'Nikon';
+                                        e.text = '[Nikon] please click this';
                                         e.link =
                                             'https://www.amazon.com/Nikon-FX-Format-Mirrorless-Camera-Body/dp/B07GPRBGQ2/ref=sr_1_3?dchild=1&keywords=2.+Product%3A+Nikon+Z6+Full+Frame+Mirrorless+Camera+Body&qid=1599960926&sr=8-3';
                                         e.imageUri = '/image/nikon-over-1700.png';
                                     }
                                 } else if (brand === 'canon') {
                                     if (price === 'below') {
-                                        e.text = 'Canon';
+                                        e.text = '[Canon] please click this';
                                         e.link =
                                             'https://www.amazon.com/Canon-PowerShot-Digital-Camera-Accessory/dp/B071NPXMLJ/ref=sr_1_5?dchild=1&keywords=Canon+-+PowerShot+SX540HS+20.3-Megapixel+Digital+Camera+-+Black&qid=1599960773&sr=8-5';
                                         e.imageUri = '/image/canon-below-1700.png';
                                     } else {
-                                        e.text = 'Canon';
+                                        e.text = '[Canon] please click this';
                                         e.link =
                                             'https://www.amazon.com/Canon-Digital-Camera-18-135mm-Adapter/dp/B01KURGSGW/ref=sr_1_10?dchild=1&keywords=Canon+DSLR+over+%241700&qid=1599960675&sr=8-10';
                                         e.imageUri = '/image/canon-over-1700.png';
@@ -149,8 +168,16 @@ const App: React.FC = () => {
                                 return e;
                             }
                             e.text = (e.text || '').replace(
+                                '*meorgift*',
+                                `${localStorage.getItem('meorgift')}`,
+                            );
+                            e.text = (e.text || '').replace(
+                                '*camera/type*',
+                                `${localStorage.getItem('camera/type') || 'DSLR'}`,
+                            );
+                            e.text = (e.text || '').replace(
                                 '*camera/price*',
-                                `${localStorage.getItem('camera/price')} $1700`,
+                                `${localStorage.getItem('camera/price')}`,
                             );
                             e.text = e.text.replace(
                                 '*camera/brand*',
@@ -257,17 +284,6 @@ const App: React.FC = () => {
                         >
                             <Modal.Body>
                                 <div className="avatar-image" />
-                                {disableInput && (
-                                    <div className="chat-processing">
-                                        <Loader
-                                            type="ThreeDots"
-                                            color="#23549C"
-                                            height={40}
-                                            width={40}
-                                        />
-                                        processing...
-                                    </div>
-                                )}
                                 <div ref={chatContainerEl} className="chat-container">
                                     {conversation
                                         .filter((e: any) => e && e.author)
@@ -279,6 +295,16 @@ const App: React.FC = () => {
                                                 chat={e}
                                             />
                                         ))}
+                                    {disableInput && (
+                                        <div className="chat-processing">
+                                            <ChatBalloon
+                                                key={`chat-loading`}
+                                                isSystem={false}
+                                                isFromMe={false}
+                                                chat={{ text: 'loading...' }}
+                                            />
+                                        </div>
+                                    )}
                                     <div ref={chatContainerBottomEl} />
                                 </div>
                             </Modal.Body>

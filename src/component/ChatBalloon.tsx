@@ -1,6 +1,9 @@
 import React from 'react';
 import classNames from 'classnames';
 import '../component/chatBalloon.css';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+// @ts-ignore
+import Loader from 'react-loader-spinner';
 
 const renderContents: any = ({ chat, imageUri }: any) => {
     const hasLink = chat && chat.link;
@@ -27,15 +30,30 @@ const renderContents: any = ({ chat, imageUri }: any) => {
                 </div>
             )}
             {hasLink ? <div style={{ height: 4 }} /> : <div />}
-            <div style={hasLink ? { paddingLeft: 20 } : {}}>
-                {chat.text && chat.text.includes('\n')
-                    ? chat.text.split('\n').map((t: any) => (
-                          <span style={{ textDecoration: hasLink ? 'underline' : 'none' }}>
-                              {t}
-                              <br />
-                          </span>
-                      ))
-                    : chat.text}
+            <div
+                style={
+                    hasLink
+                        ? { paddingLeft: 20 }
+                        : chat.text && chat.text === 'loading...'
+                        ? {
+                              paddingLeft: 20,
+                              paddingRight: 60,
+                          }
+                        : {}
+                }
+            >
+                {chat.text && chat.text === 'loading...' ? (
+                    <Loader type="ThreeDots" color="#23549C" height={24} width={40} />
+                ) : chat.text && chat.text.includes('\n') ? (
+                    chat.text.split('\n').map((t: any) => (
+                        <span style={{ textDecoration: hasLink ? 'underline' : 'none' }}>
+                            {t}
+                            <br />
+                        </span>
+                    ))
+                ) : (
+                    chat.text
+                )}
             </div>
         </div>
     );

@@ -257,13 +257,10 @@ textarea:focus, input:focus{
 }
 
 .chat-processing {
-  position: absolute;
-  bottom: 20px;
-  left: 20%;
+  position: relative;
   color: #5f6ae3;
-  text-align: right;
+  text-align: left;
   font-weight: bold;
-  transform: translateX(-60%) translateY(-80%) scale(1.05);
 }
 
 .chat-input-box {
@@ -352,6 +349,6 @@ textarea:focus, input:focus{
 
 .chat-balloon img.image {
   max-width: 220px;
-  min-height: 30px;
+  min-height: 120px;
   padding-left: 24px;
 }

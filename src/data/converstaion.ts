@@ -24,7 +24,7 @@ export const conversations: {
         {
             author: 'Alex',
             text:
-                'Okay, so, you’d like to buy a camera for a gift. I’d be glad to help you find a camera.',
+                'Okay, so, you’d like to buy a camera *meorgift*. I’d be glad to help you find a camera.',
         },
         {
             author: 'Alex',
@@ -40,7 +40,7 @@ export const conversations: {
         {
             author: 'Alex',
             text:
-                'Okay, so you are looking for a point-and-shoot camera as a gift. Okay, let me ask another question',
+                'Okay, so you are looking for a *camera/type* camera *meorgift*. Okay, let me ask another question.',
         },
         {
             author: 'Alex',
@@ -60,11 +60,11 @@ export const conversations: {
     [
         {
             author: 'Alex',
-            text: 'Okay, you’d like to buy a *camera/brand* camera *camera/price*',
+            text: 'Okay, you’d like to buy a *camera/brand* camera *camera/price*.',
         },
         {
             author: 'Alex',
-            text: 'Please give me a moment, and I’ll look for the best digital camera for you',
+            text: 'Please give me a moment, and I’ll look for the best digital camera for you.',
         },
         {
             author: 'Alex',
