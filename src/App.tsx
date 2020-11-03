@@ -214,9 +214,8 @@ const App: React.FC = () => {
                             </div>
                             <div className="mx-5 mt-2 mb-2">
                                 <h5 className="subMessage">
-                                    Start counseling with our AI agent Alex for great
-                                    recommendations on digital cameras, from point and shoot to
-                                    DSLR.
+                                    Start counseling with our AI agent Tom for great recommendations
+                                    on digital cameras, from point and shoot to DSLR.
                                 </h5>
                             </div>
                             <p className="mx-5 mt-4 mb-2 text-left">
@@ -234,7 +233,7 @@ const App: React.FC = () => {
                         </div>
                         <p className="inShort m-2">FREE SHIPPING</p>
                         <p className="description m-1">
-                            Change the sentence to: Free next-day delivery on thousands of items.
+                            Free next-day delivery on thousands of items.
                         </p>
                     </div>
                     <div className="col-sm-4 text-center feature">
