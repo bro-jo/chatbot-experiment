@@ -19,12 +19,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="2760" />
-    <option name="y" value="-556" />
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
-  </component>
   <component name="ProjectId" id="1hnQBTOvxx9NuFztAA3oflbI4AA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -124,6 +118,7 @@
       <workItem from="1600699131874" duration="45000" />
       <workItem from="1600730265099" duration="14000" />
       <workItem from="1601837263423" duration="2354000" />
+      <workItem from="1604368719622" duration="1536000" />
     </task>
     <servers />
   </component>
@@ -135,29 +130,29 @@
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state x="-1222" y="195" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600644577177" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1601839909748">
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom" timestamp="1604403300573">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.bottom/-1920.-99.1920.1080/-3000.-293.1080.1897/0.23.2048.1257@-1920.-99.1920.1080" timestamp="1601839909748" />
-    <state width="1899" height="280" key="GridCell.Tab.0.bottom/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1601839540609" />
+    <state width="1899" height="280" key="GridCell.Tab.0.bottom/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604403300573" />
     <state width="1899" height="280" key="GridCell.Tab.0.bottom/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600673405116" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1601839909746">
+    <state width="1899" height="280" key="GridCell.Tab.0.center" timestamp="1604403300568">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.center/-1920.-99.1920.1080/-3000.-293.1080.1897/0.23.2048.1257@-1920.-99.1920.1080" timestamp="1601839909746" />
-    <state width="1899" height="280" key="GridCell.Tab.0.center/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1601839540607" />
+    <state width="1899" height="280" key="GridCell.Tab.0.center/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604403300568" />
     <state width="1899" height="280" key="GridCell.Tab.0.center/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600673405113" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1601839909745">
+    <state width="1899" height="280" key="GridCell.Tab.0.left" timestamp="1604403300566">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.left/-1920.-99.1920.1080/-3000.-293.1080.1897/0.23.2048.1257@-1920.-99.1920.1080" timestamp="1601839909745" />
-    <state width="1899" height="280" key="GridCell.Tab.0.left/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1601839540606" />
+    <state width="1899" height="280" key="GridCell.Tab.0.left/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604403300566" />
     <state width="1899" height="280" key="GridCell.Tab.0.left/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600673405112" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1601839909747">
+    <state width="1899" height="280" key="GridCell.Tab.0.right" timestamp="1604403300570">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.right/-1920.-99.1920.1080/-3000.-293.1080.1897/0.23.2048.1257@-1920.-99.1920.1080" timestamp="1601839909747" />
-    <state width="1899" height="280" key="GridCell.Tab.0.right/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1601839540608" />
+    <state width="1899" height="280" key="GridCell.Tab.0.right/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604403300570" />
     <state width="1899" height="280" key="GridCell.Tab.0.right/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600673405115" />
     <state x="-1451" y="80" key="SettingsEditor" timestamp="1601837898089">
       <screen x="-1920" y="-99" width="1920" height="1080" />
@@ -168,15 +163,16 @@
     </state>
     <state x="-1361" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1601838068533" />
     <state x="-1361" y="58" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600647073068" />
-    <state x="-1253" y="196" width="586" height="490" key="find.popup" timestamp="1601837628495">
+    <state x="-1253" y="196" width="586" height="490" key="find.popup" timestamp="1604368853146">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
     <state x="-1253" y="196" width="586" height="490" key="find.popup/-1920.-99.1920.1080/-3000.-293.1080.1897/0.23.2048.1257@-1920.-99.1920.1080" timestamp="1601837359494" />
-    <state x="-1253" y="196" width="586" height="490" key="find.popup/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1601837628495" />
+    <state x="-1253" y="196" width="586" height="490" key="find.popup/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604368853146" />
     <state x="-1253" y="196" width="586" height="490" key="find.popup/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600670828934" />
-    <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup" timestamp="1600670849912">
+    <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup" timestamp="1604368865203">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>
+    <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604368865203" />
     <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup/-3000.-316.1080.1920/-1920.-99.1920.1080/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1600670849912" />
   </component>
 </project>
