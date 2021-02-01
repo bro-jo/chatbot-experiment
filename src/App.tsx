@@ -5,10 +5,9 @@ import Modal from 'react-bootstrap/Modal';
 import { ChatBalloon } from './component/ChatBalloon';
 import { conversations } from './data/converstaion';
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
-// @ts-ignore
-import Loader from 'react-loader-spinner';
 import classNames from 'classnames';
 import _ from 'lodash';
+import qs from 'qs';
 
 let keywords = [
     'Laptop',
@@ -27,6 +26,63 @@ let keywords = [
 
 const INTERVAL_TIME = 3100;
 
+const convertConversation = (e: any) => {
+    if ((e.text || '').trim() === '*camera-choice-space*') {
+        const brand = localStorage.getItem('camera/brand');
+        const price = localStorage.getItem('camera/price');
+        if (brand === 'sony') {
+            if (price === 'below') {
+                e.text = '[Sony] please click this';
+                e.link =
+                    'https://www.amazon.com/Sony-Cyber-shot-DSC-W800-Digital-Camera/dp/B00KJX57I8/ref=sr_1_3?dchild=1&keywords=Sony+DSCW800%2FB+20.1+MP+Digital+Camera+%28Black&qid=1599960270&sr=8-3';
+                e.imageUri = '/image/sony-below-1700.png';
+            } else {
+                e.text = '[Sony] please click this';
+                e.link =
+                    'https://www.amazon.com/Sony-Full-Frame-Mirrorless-Interchangeable-Lens-Optical/dp/B07YQJ9392/ref=sr_1_1?dchild=1&keywords=Sony+a7+III+Full-Frame+Mirrorless+Interchangeable-Lens+Camera+Optical+with+3-Inch+LCD%2C+Black+%28ILCE7M3%2FB%29&qid=1599960502&sr=8-1';
+                e.imageUri = '/image/sony-over-1700.png';
+            }
+        } else if (brand === 'nikon') {
+            if (price === '[below') {
+                e.text = 'Nikon] please click this';
+                e.link =
+                    'https://www.amazon.com/Nikon-COOLPIX-Digital-Camera-Black/dp/B01C3LEBW6/ref=sr_1_7?dchild=1&keywords=Nikon+camera+below+%241700&qid=1599961011&sr=8-7';
+                e.imageUri = '/image/nikon-below-1700.png';
+            } else {
+                e.text = '[Nikon] please click this';
+                e.link =
+                    'https://www.amazon.com/Nikon-FX-Format-Mirrorless-Camera-Body/dp/B07GPRBGQ2/ref=sr_1_3?dchild=1&keywords=2.+Product%3A+Nikon+Z6+Full+Frame+Mirrorless+Camera+Body&qid=1599960926&sr=8-3';
+                e.imageUri = '/image/nikon-over-1700.png';
+            }
+        } else if (brand === 'canon') {
+            if (price === 'below') {
+                e.text = '[Canon] please click this';
+                e.link =
+                    'https://www.amazon.com/Canon-PowerShot-Digital-Camera-Accessory/dp/B071NPXMLJ/ref=sr_1_5?dchild=1&keywords=Canon+-+PowerShot+SX540HS+20.3-Megapixel+Digital+Camera+-+Black&qid=1599960773&sr=8-5';
+                e.imageUri = '/image/canon-below-1700.png';
+            } else {
+                e.text = '[Canon] please click this';
+                e.link =
+                    'https://www.amazon.com/Canon-Digital-Camera-18-135mm-Adapter/dp/B01KURGSGW/ref=sr_1_10?dchild=1&keywords=Canon+DSLR+over+%241700&qid=1599960675&sr=8-10';
+                e.imageUri = '/image/canon-over-1700.png';
+            }
+        }
+
+        return e;
+    }
+    e.text = (e.text || '').replace('*meorgift*', `${localStorage.getItem('meorgift')}`);
+    e.text = (e.text || '').replace(
+        '*camera/type*',
+        `${localStorage.getItem('camera/type') || 'DSLR'}`,
+    );
+    e.text = (e.text || '').replace('*camera/price*', `${localStorage.getItem('camera/price')}`);
+    e.text = e.text.replace(
+        '*camera/brand*',
+        _.upperFirst(localStorage.getItem('camera/brand') || ''),
+    );
+    return e;
+};
+
 const App: React.FC = () => {
     const inputEl = useRef(null);
     const chatContainerEl = useRef(null);
@@ -35,6 +91,19 @@ const App: React.FC = () => {
     const [disableInput, setDisableInput] = useState(false);
     const [step, setStep] = useState(0);
     const [showModal, setShowModal] = useState(false);
+    const [imageType, setImageType] = useState('1');
+
+    const init = async () => {
+        const queryString = qs.parse(window.location.search, { ignoreQueryPrefix: true });
+        if (queryString && queryString.imageType && queryString.imageType.toString) {
+            setImageType(queryString.imageType.toString() as any);
+        }
+    };
+
+    useEffect(() => {
+        init();
+    }, []);
+
     useEffect(() => {
         if (!disableInput && inputEl && inputEl.current) {
             (inputEl.current as any).focus();
@@ -83,16 +152,21 @@ const App: React.FC = () => {
                 localStorage.setItem('camera/brand', 'canon');
             }
             const number = parseInt(value.replace(/\D/g, ''), 10);
-            if (value.toLowerCase().includes('me')) {
+            if (
+                value.toLowerCase().includes('me') ||
+                value.toLowerCase().includes('mine') ||
+                value.toLowerCase().includes('my')
+            ) {
                 localStorage.setItem('meorgift', 'for you');
             }
             if (value.toLowerCase().includes('gift')) {
                 localStorage.setItem('meorgift', 'as a gift');
             }
-            if (value.toLowerCase().includes('dslr')) {
+            if (value.toLowerCase().includes('dslr') || value.toLowerCase().includes('digital')) {
                 localStorage.setItem('camera/type', 'DSLR');
             }
             if (
+                value.toLowerCase().includes('point') ||
                 value.toLowerCase().includes('point and shoot') ||
                 value.toLowerCase().includes('point-and-shoot')
             ) {
@@ -122,69 +196,9 @@ const App: React.FC = () => {
 
                 conversations[step + 1].forEach((m, i) => {
                     setTimeout(() => {
-                        const c = conversations[step + 1].slice(0, i + 1).map(e => {
-                            if ((e.text || '').trim() === '*camera-choice-space*') {
-                                const brand = localStorage.getItem('camera/brand');
-                                const price = localStorage.getItem('camera/price');
-                                console.log({ brand, price });
-                                if (brand === 'sony') {
-                                    if (price === 'below') {
-                                        e.text = '[Sony] please click this';
-                                        e.link =
-                                            'https://www.amazon.com/Sony-Cyber-shot-DSC-W800-Digital-Camera/dp/B00KJX57I8/ref=sr_1_3?dchild=1&keywords=Sony+DSCW800%2FB+20.1+MP+Digital+Camera+%28Black&qid=1599960270&sr=8-3';
-                                        e.imageUri = '/image/sony-below-1700.png';
-                                    } else {
-                                        e.text = '[Sony] please click this';
-                                        e.link =
-                                            'https://www.amazon.com/Sony-Full-Frame-Mirrorless-Interchangeable-Lens-Optical/dp/B07YQJ9392/ref=sr_1_1?dchild=1&keywords=Sony+a7+III+Full-Frame+Mirrorless+Interchangeable-Lens+Camera+Optical+with+3-Inch+LCD%2C+Black+%28ILCE7M3%2FB%29&qid=1599960502&sr=8-1';
-                                        e.imageUri = '/image/sony-over-1700.png';
-                                    }
-                                } else if (brand === 'nikon') {
-                                    if (price === '[below') {
-                                        e.text = 'Nikon] please click this';
-                                        e.link =
-                                            'https://www.amazon.com/Nikon-COOLPIX-Digital-Camera-Black/dp/B01C3LEBW6/ref=sr_1_7?dchild=1&keywords=Nikon+camera+below+%241700&qid=1599961011&sr=8-7';
-                                        e.imageUri = '/image/nikon-below-1700.png';
-                                    } else {
-                                        e.text = '[Nikon] please click this';
-                                        e.link =
-                                            'https://www.amazon.com/Nikon-FX-Format-Mirrorless-Camera-Body/dp/B07GPRBGQ2/ref=sr_1_3?dchild=1&keywords=2.+Product%3A+Nikon+Z6+Full+Frame+Mirrorless+Camera+Body&qid=1599960926&sr=8-3';
-                                        e.imageUri = '/image/nikon-over-1700.png';
-                                    }
-                                } else if (brand === 'canon') {
-                                    if (price === 'below') {
-                                        e.text = '[Canon] please click this';
-                                        e.link =
-                                            'https://www.amazon.com/Canon-PowerShot-Digital-Camera-Accessory/dp/B071NPXMLJ/ref=sr_1_5?dchild=1&keywords=Canon+-+PowerShot+SX540HS+20.3-Megapixel+Digital+Camera+-+Black&qid=1599960773&sr=8-5';
-                                        e.imageUri = '/image/canon-below-1700.png';
-                                    } else {
-                                        e.text = '[Canon] please click this';
-                                        e.link =
-                                            'https://www.amazon.com/Canon-Digital-Camera-18-135mm-Adapter/dp/B01KURGSGW/ref=sr_1_10?dchild=1&keywords=Canon+DSLR+over+%241700&qid=1599960675&sr=8-10';
-                                        e.imageUri = '/image/canon-over-1700.png';
-                                    }
-                                }
-
-                                return e;
-                            }
-                            e.text = (e.text || '').replace(
-                                '*meorgift*',
-                                `${localStorage.getItem('meorgift')}`,
-                            );
-                            e.text = (e.text || '').replace(
-                                '*camera/type*',
-                                `${localStorage.getItem('camera/type') || 'DSLR'}`,
-                            );
-                            e.text = (e.text || '').replace(
-                                '*camera/price*',
-                                `${localStorage.getItem('camera/price')}`,
-                            );
-                            e.text = e.text.replace(
-                                '*camera/brand*',
-                                _.upperFirst(localStorage.getItem('camera/brand') || ''),
-                            );
-                            return e;
-                        });
+                        const c = conversations[step + 1]
+                            .slice(0, i + 1)
+                            .map(e => convertConversation(e));
                         setConversation(currentConversation.concat(c));
                         scrollToBottom();
                         if (i === conversations[step + 1].length - 1) {
@@ -226,36 +240,6 @@ const App: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row mt-5 mx-0 px-0">
-                    <div className="col-sm-4 text-center feature">
-                        <div className="logo-wrapper m-2 text-center">
-                            <div className="logo-shipping" />
-                        </div>
-                        <p className="inShort m-2">FREE SHIPPING</p>
-                        <p className="description m-1">
-                            Free next-day delivery on thousands of items.
-                        </p>
-                    </div>
-                    <div className="col-sm-4 text-center feature">
-                        <div className="logo-wrapper m-2 text-center">
-                            <div className="logo-return" />
-                        </div>
-                        <p className="inShort m-2">FREE RETURNS</p>
-                        <p className="description m-1">
-                            You may return any item purchased on Digital World.
-                        </p>
-                    </div>
-                    <div className="col-sm-4 text-center feature">
-                        <div className="logo-wrapper m-2 text-center">
-                            <div className="logo-support" />
-                        </div>
-                        <p className="inShort m-2">CUSTOMER SUPPORT</p>
-                        <p className="description m-1">
-                            Manage your account, check order status or access the Digital World
-                            customer support.
-                        </p>
-                    </div>
-                </div>
                 <div className="row my-5 py-5 mx-0 my-0">&nbsp;</div>
             </div>
             {/*<div className="App-overlay" />*/}
@@ -282,10 +266,18 @@ const App: React.FC = () => {
                             animation={false}
                         >
                             <Modal.Body>
-                                <div className="avatar-image" />
+                                <div
+                                    className={classNames('avatar-image', {
+                                        'avatar-image2': imageType === '2',
+                                        'avatar-image3': imageType === '3',
+                                        'avatar-image4': imageType === '4',
+                                        'avatar-image5': imageType === '5',
+                                    })}
+                                />
                                 <div ref={chatContainerEl} className="chat-container">
                                     {conversation
                                         .filter((e: any) => e && e.author)
+                                        .map((e: any) => convertConversation(e))
                                         .map((e: any, i: number) => (
                                             <ChatBalloon
                                                 key={`chat-${i}`}

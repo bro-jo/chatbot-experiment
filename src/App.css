@@ -233,7 +233,7 @@ textarea:focus, input:focus{
 
 .chat-container {
   display: inline-block;
-  width: 75%;
+  width: 55%;
   padding: 8px 20px;
   background-color: #ffffff00;
   border-radius: 12px;
@@ -242,7 +242,7 @@ textarea:focus, input:focus{
 .avatar-image {
   display: inline-block;
   vertical-align: top;
-  width: 22%;
+  width: 38%;
   height: 60vh;
   margin-left: 1%;
   margin-right: 0.2%;
@@ -254,6 +254,34 @@ textarea:focus, input:focus{
   background-repeat: no-repeat;
   align-content: end;
   align-self: end;
+}
+
+.avatar-image2 {
+  background: url("/image/avatar2.jpeg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.avatar-image3 {
+  background: url("/image/GCM.gif");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.avatar-image4 {
+  background: url("/image/GHM.gif");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.avatar-image5 {
+  background: url("/image/General_Cartoon.jpg");
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .chat-processing {
