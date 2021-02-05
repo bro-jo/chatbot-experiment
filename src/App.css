@@ -1,3 +1,15 @@
+
+@media screen and (max-width: 576px) {
+  * {
+    display: none;
+    width: 0;
+    height: 0;
+    max-width: 0;
+    max-height: 0;
+    opacity: 0;
+  }
+}
+
 textarea:focus, input:focus{
   outline: none;
   border-color: inherit;

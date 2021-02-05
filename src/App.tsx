@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef, useEffect } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Modal from 'react-bootstrap/Modal';
@@ -8,21 +8,6 @@ import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import classNames from 'classnames';
 import _ from 'lodash';
 import qs from 'qs';
-
-let keywords = [
-    'Laptop',
-    'Desktop',
-    'Men’s Shoes',
-    'Women’s Shoes',
-    'Ex1',
-    'Ex2',
-    'Ex3',
-    'Ex4',
-    'Ex5',
-    'Ex6',
-    'Ex7',
-    'Ex8',
-];
 
 const INTERVAL_TIME = 3100;
 
@@ -43,11 +28,11 @@ const convertConversation = (e: any) => {
                 e.imageUri = '/image/sony-over-1700.png';
             }
         } else if (brand === 'nikon') {
-            if (price === '[below') {
-                e.text = 'Nikon] please click this';
+            if (price === 'below') {
+                e.text = '[Nikon] please click this';
                 e.link =
-                    'https://www.amazon.com/Nikon-COOLPIX-Digital-Camera-Black/dp/B01C3LEBW6/ref=sr_1_7?dchild=1&keywords=Nikon+camera+below+%241700&qid=1599961011&sr=8-7';
-                e.imageUri = '/image/nikon-below-1700.png';
+                    'https://www.amazon.com/Nikon-COOLPIX-Digital-Camera-Built/dp/B08B6HSPXC/ref=sr_1_2?dchild=1&amp;keywords=nikon+under+1700&amp;qid=1612317538&amp;rnid=2941120011&amp;s=electronics&amp;sr=1-2';
+                e.imageUri = '/image/nikon-below-v2.png';
             } else {
                 e.text = '[Nikon] please click this';
                 e.link =
@@ -63,8 +48,8 @@ const convertConversation = (e: any) => {
             } else {
                 e.text = '[Canon] please click this';
                 e.link =
-                    'https://www.amazon.com/Canon-Digital-Camera-18-135mm-Adapter/dp/B01KURGSGW/ref=sr_1_10?dchild=1&keywords=Canon+DSLR+over+%241700&qid=1599960675&sr=8-10';
-                e.imageUri = '/image/canon-over-1700.png';
+                    'https://www.amazon.com/Canon-Mark-Frame-Digital-Camera/dp/B01KURGS9E/ref=sr_1_1?dchild=1&amp;keywords=Canon+DSLR+over+%241700&amp;qid=1612317435&amp;sr=8-1';
+                e.imageUri = '/image/canon-over-v2.png';
             }
         }
 
