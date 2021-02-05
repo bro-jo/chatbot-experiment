@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f85b243e-9ac4-4abd-8743-23064a55f5d3" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/image/imageType2.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,14 +50,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/image" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/public/image" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public" />
       <recent name="$PROJECT_DIR$/src/component" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public/image" />
     </key>
   </component>
   <component name="RunManager" selected="npm.build">
@@ -121,6 +122,7 @@
       <workItem from="1604368719622" duration="1536000" />
       <workItem from="1604403349955" duration="608000" />
       <workItem from="1612150305610" duration="2922000" />
+      <workItem from="1612493910068" duration="140000" />
     </task>
     <servers />
   </component>
@@ -148,11 +150,11 @@
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.right/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604404662823" />
     <state width="2539" height="389" key="GridCell.Tab.0.right/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612154029146" />
-    <state x="889" y="393" width="782" height="654" key="find.popup" timestamp="1612151552212">
+    <state x="889" y="393" width="782" height="654" key="find.popup" timestamp="1612494011032">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state x="-1253" y="196" width="586" height="490" key="find.popup/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604403531056" />
-    <state x="889" y="393" width="782" height="654" key="find.popup/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612151552212" />
+    <state x="889" y="393" width="782" height="654" key="find.popup/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612494011032" />
     <state x="-1295" y="142" width="670" height="676" key="search.everywhere.popup" timestamp="1604368865203">
       <screen x="-1920" y="-99" width="1920" height="1080" />
     </state>

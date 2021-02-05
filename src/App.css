@@ -257,7 +257,7 @@ textarea:focus, input:focus{
 }
 
 .avatar-image2 {
-  background: url("/image/avatar2.jpeg");
+  background: url("/image/imageType2.jpeg");
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
