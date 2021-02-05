@@ -3,106 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f85b243e-9ac4-4abd-8743-23064a55f5d3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/CNAME" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/asset-manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/GCM.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/GHM.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/General_Cartoon.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/avatar1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/avatar2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/bg-commerce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/canon-below-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/canon-over-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/facebook_cover_photo_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/facebook_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/information.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/instagram_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/linkedin_banner_image_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/linkedin_banner_image_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/linkedin_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/logo_transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/main_camera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/nikon-below-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/nikon-over-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/notebooks1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/pinterest_board_photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/pinterest_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/return.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/send.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/sony-below-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/sony-over-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/truck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/twitter_header_photo_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/image/twitter_header_photo_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/precache-manifest.4bb0523d07b0b4666394d1f94dfcffc6.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/css/2.333ff155.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/css/2.333ff155.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/css/main.522a4278.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/css/main.522a4278.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/js/2.da0c44dd.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/js/2.da0c44dd.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/js/main.5c7c9111.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/js/main.5c7c9111.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/js/runtime-main.d04e3319.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/build/static/js/runtime-main.d04e3319.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/avatar1.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/avatar2.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/bg-commerce.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/canon-below-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/canon-over-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/facebook_cover_photo_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/facebook_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/favicon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/information.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/instagram_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/linkedin_banner_image_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/linkedin_banner_image_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/linkedin_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/logo_transparent.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/main_camera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/nikon-below-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/nikon-over-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/notebooks1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/pinterest_board_photo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/pinterest_profile_image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/return.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/search.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/send.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/sony-below-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/sony-over-1700.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/truck.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/twitter_header_photo_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/image/twitter_header_photo_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/precache-manifest.a8469e7ac7f4d6203fed77387616b386.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/service-worker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/2.de415ee2.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/2.de415ee2.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/main.93d73046.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/css/main.93d73046.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/2.4ede8398.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/2.4ede8398.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/main.aa83d9f7.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/main.aa83d9f7.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/runtime-main.d04e3319.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/static/js/runtime-main.d04e3319.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,7 +120,7 @@
       <workItem from="1601837263423" duration="2354000" />
       <workItem from="1604368719622" duration="1536000" />
       <workItem from="1604403349955" duration="608000" />
-      <workItem from="1612150305610" duration="2349000" />
+      <workItem from="1612150305610" duration="2922000" />
     </task>
     <servers />
   </component>
@@ -228,26 +128,26 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="2539" height="389" key="GridCell.Tab.0.bottom" timestamp="1612152736452">
+    <state width="2539" height="389" key="GridCell.Tab.0.bottom" timestamp="1612154029147">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.bottom/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604404662824" />
-    <state width="2539" height="389" key="GridCell.Tab.0.bottom/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612152736452" />
-    <state width="2539" height="389" key="GridCell.Tab.0.center" timestamp="1612152736450">
+    <state width="2539" height="389" key="GridCell.Tab.0.bottom/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612154029147" />
+    <state width="2539" height="389" key="GridCell.Tab.0.center" timestamp="1612154029145">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.center/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604404662822" />
-    <state width="2539" height="389" key="GridCell.Tab.0.center/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612152736450" />
-    <state width="2539" height="389" key="GridCell.Tab.0.left" timestamp="1612152736449">
+    <state width="2539" height="389" key="GridCell.Tab.0.center/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612154029145" />
+    <state width="2539" height="389" key="GridCell.Tab.0.left" timestamp="1612154029143">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.left/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604404662821" />
-    <state width="2539" height="389" key="GridCell.Tab.0.left/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612152736449" />
-    <state width="2539" height="389" key="GridCell.Tab.0.right" timestamp="1612152736451">
+    <state width="2539" height="389" key="GridCell.Tab.0.left/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612154029143" />
+    <state width="2539" height="389" key="GridCell.Tab.0.right" timestamp="1612154029146">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
     <state width="1899" height="280" key="GridCell.Tab.0.right/-1920.-99.1920.1080/-3000.-316.1080.1920/0.0.2048.1280@-1920.-99.1920.1080" timestamp="1604404662823" />
-    <state width="2539" height="389" key="GridCell.Tab.0.right/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612152736451" />
+    <state width="2539" height="389" key="GridCell.Tab.0.right/-2560.-50.2560.1440/0.0.2560.1440@0.0.2560.1440" timestamp="1612154029146" />
     <state x="889" y="393" width="782" height="654" key="find.popup" timestamp="1612151552212">
       <screen x="0" y="0" width="2560" height="1440" />
     </state>
