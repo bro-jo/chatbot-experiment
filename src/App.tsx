@@ -13,7 +13,7 @@ const INTERVAL_TIME = 3100;
 
 const convertConversation = (e: any) => {
     if ((e.text || '').trim() === '*camera-choice-space*') {
-        const brand = localStorage.getItem('camera/brand');
+        const brand = _.toLower(localStorage.getItem('camera/brand') || '');
         const price = localStorage.getItem('camera/price');
         if (brand === 'sony') {
             if (price === 'below') {
